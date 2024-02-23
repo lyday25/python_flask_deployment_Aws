@@ -12,10 +12,11 @@ def findhostname():
     return str(hostname),str(hostip)
 
 def findaddress():
-    phone_number="09083456781"
+    phone_number="09083456788"
     emailaddress="df@gmail.com"
-    companyaddress= "4 Ojo road, Ogba, Lagos"
-    return str(phone_number),str(emailaddress),str("companyaddress")
+    comp="4 Ojo road Ogba,Lagos"
+    
+    return str(phone_number),str(emailaddress),str(comp)
 
 
 @app.route("/")
@@ -38,8 +39,8 @@ def hostname():
 
 @app.route("/aboutUs")
 def aboutUs():
-    phone_number,emailaddress,companyad=findaddress()
-    return render_template('aboutUs.html',phoneno=phone_number, email=emailaddress, address=companyad)
+    phone_number,emailaddress,comp=findaddress()
+    return render_template('aboutUs.html',phoneno=phone_number, email=emailaddress, address=comp)
 
 
 
